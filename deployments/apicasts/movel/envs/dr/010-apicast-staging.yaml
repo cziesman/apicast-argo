@@ -2,7 +2,7 @@ apiVersion: apps.3scale.net/v1alpha1
 kind: APIcast
 metadata:
   name: apicast-staging-movel
-  namespace: redes-3scale-apicast
+  namespace: redes-3scale-apicast-dev
 spec:
   adminPortalCredentialsRef:
     name: apicast-configuration-url-secret
