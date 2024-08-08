@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dr-apicast-movel
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/cziesman/apicast-argo.git
+    targetRevision: HEAD
+    path: deployments/apicasts/movel/envs/dr
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  syncOptions:
+    - ApplyOutOfSyncOnly=true

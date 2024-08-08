@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ctp-apicast-fixa
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/cziesman/apicast-argo.git
+    targetRevision: HEAD
+    path: deployments/apicasts/fixa/envs/ctp
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  syncOptions:
+    - ApplyOutOfSyncOnly=true

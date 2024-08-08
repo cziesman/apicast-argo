@@ -1,0 +1,31 @@
+apiVersion: apps.3scale.net/v1alpha1
+kind: APIcast
+metadata:
+  name: apicast-staging-fixa
+  namespace: redes-3scale-apicast
+spec:
+  adminPortalCredentialsRef:
+    name: apicast-configuration-url-secret
+  enabledServices:
+    - '68'
+    - '69'
+    - '70'
+    - '81'
+    - '85'
+    - '86'
+    - '87'
+    - '88'
+    - '89'
+    - '96'
+  extendedMetrics: true
+  logLevel: info
+  replicas: 1
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 50m
+      memory: 64Mi
+  responseCodesIncluded: true
+  timezone: America/Sao_Paulo
