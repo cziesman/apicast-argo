@@ -4,7 +4,7 @@
 
 ### Create an access token in 3scale
 
-1. Using the DR 3scale Admin interface, navigate to Account Settings ==> Tokens
+1. Using the DR 3scale Admin interface, navigate to _Account Settings ==> Tokens_
 2. Add a new token with access to all APIs and Read/Write permissions.
 3. Make a note of the generated token value.
 
@@ -49,7 +49,7 @@ type: Opaque
 
 ### Create an access token in 3scale
 
-1. Using the CTP 3scale Admin interface, navigate to Account Settings ==> Tokens
+1. Using the CTP 3scale Admin interface, navigate to _Account Settings ==> Tokens_
 2. Add a new token with access to all APIs and Read/Write permissions.
 3. Make a note of the generated token value.
 
